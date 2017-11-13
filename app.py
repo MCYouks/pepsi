@@ -19,8 +19,9 @@ import numpy as np
 import loadspreadsheet as ls1
 import loadsql as ls2
 
-app = dash.Dash()
+app = dash.Dash(__name__)
 server = app.server
+
 app.config.supress_callback_exceptions = True
 app.title = 'Pepsi Project'
 app.css.append_css({"external_url": "https://codepen.io/tenoli/pen/RjREVV.css"})  # Boostrap stylesheet
