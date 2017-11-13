@@ -16,7 +16,7 @@ import plotly.graph_objs as go
 import pandas as pd
 import numpy as np
 
-import loadspreadsheet as ls1
+#import loadspreadsheet as ls1
 import loadsql as ls2
 
 app = dash.Dash(__name__)
@@ -418,7 +418,6 @@ def update_store_workshop3(hover_store):
     store_id = hover_store['points'][0]['text']
     bool = df_monitoring.loc[store_id, 'cover_placed']
     return d[bool]
-
 
 
 if 'DYNO' in os.environ:
