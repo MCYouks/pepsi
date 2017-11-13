@@ -16,9 +16,8 @@ from oauth2client.tools import argparser
 import pandas as pd
 
 try:
-    # import argparse
-    # flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-    flags = argparser.parse_args('--auth_host_name localhost --logging_level INFO'.split())
+    import argparse
+    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 except ImportError:
     flags = None
 
