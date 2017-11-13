@@ -11,6 +11,9 @@ Flask==0.12.2
 Flask-Compress==1.4.0
 Flask-SeaSurf==0.2.2
 google-api-python-client==1.6.4
+google-auth==1.2.1
+google-auth-httplib2==0.0.2
+google-auth-oauthlib==0.1.1
 gunicorn==19.7.1
 httplib2==0.10.3
 idna==2.6
