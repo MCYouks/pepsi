@@ -11,12 +11,14 @@ from apiclient import discovery
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
+from oauth2client.tools import argparser
 
 import pandas as pd
 
 try:
-    import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+    # import argparse
+    # flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+    flags = argparser.parse_args('--auth_host_name localhost --logging_level INFO'.split())
 except ImportError:
     flags = None
 
