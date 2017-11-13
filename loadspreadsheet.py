@@ -56,7 +56,7 @@ def get_credentials():
     return credentials
 
 
-def get_df():
+def load_monitoring_data():
     """Returns the spreadsheet data into a pandas dataframe.
 
     """
@@ -101,8 +101,13 @@ def get_df():
     df = df.rename(columns=rename_columns)
     df = df.set_index('store_id')
 
+    replace_values = {'SI': True, 'NO': False}
+    df = df.replace(replace_values)
+
+    df = df.loc[df.index.drop_duplicates()]
+
     return df
 
 
 if __name__ == '__main__':
-    df = get_df()
+    df = load_monitoring_data()
